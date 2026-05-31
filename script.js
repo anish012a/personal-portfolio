@@ -8,7 +8,7 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
-const assetBase = window.location.protocol === 'file:' ? '../images/' : '/images/';
+const assetBase = 'images/';
 
 const portfolioAssets = [
     {
