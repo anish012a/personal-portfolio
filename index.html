@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of Amol Shrestha - Digital Marketing, Data Specialist, and Front-End Developer">
-    <title>Amol Shrestha - Portfolio</title>
+    <meta name="description" content="Premium portfolio for Amol Shrestha, Digital Marketing Specialist, SEO & Content Strategist, and Creative Website Designer.">
+    <title>Amol Shrestha | Digital Marketing Specialist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header/Navigation -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <a href="#" class="brand">AS</a>
-                </div>
-                
-                <nav class="nav-desktop">
+                <a href="#hero" class="brand" aria-label="Go to home">
+                    <span class="brand-mark">AS</span>
+                    <span class="brand-copy">Amol Shrestha</span>
+                </a>
+
+                <nav class="nav-desktop" aria-label="Primary navigation">
                     <a href="#hero" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
                     <a href="#experience" class="nav-link">Experience</a>
                     <a href="#gallery" class="nav-link">Gallery</a>
-                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#featured-project" class="nav-link">Featured</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </nav>
 
                 <div class="header-controls">
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                        <span class="sun-icon">☀️</span>
-                        <span class="moon-icon">🌙</span>
+                    <a href="#contact" class="header-cta">Hire Me</a>
+                    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+                        <span class="theme-icon theme-icon-light">Light</span>
+                        <span class="theme-icon theme-icon-dark">Dark</span>
                     </button>
-                    <button class="menu-toggle" id="menuToggle">
+                    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navMobile">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -42,570 +44,499 @@
                 </div>
             </div>
 
-            <!-- Mobile Navigation -->
-            <nav class="nav-mobile" id="navMobile">
+            <nav class="nav-mobile" id="navMobile" aria-label="Mobile navigation">
                 <a href="#hero" class="nav-link-mobile">Home</a>
                 <a href="#about" class="nav-link-mobile">About</a>
+                <a href="#services" class="nav-link-mobile">Services</a>
                 <a href="#experience" class="nav-link-mobile">Experience</a>
                 <a href="#gallery" class="nav-link-mobile">Gallery</a>
-                <a href="#projects" class="nav-link-mobile">Projects</a>
+                <a href="#featured-project" class="nav-link-mobile">Featured</a>
                 <a href="#skills" class="nav-link-mobile">Skills</a>
                 <a href="#contact" class="nav-link-mobile">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
         <section id="hero" class="hero">
-            <div class="hero-bg"></div>
+            <div class="hero-backdrop" aria-hidden="true"></div>
             <div class="container">
-                <div class="hero-content">
+                <div class="hero-content fade-up">
                     <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">Amol Shrestha</span>
+                        <span>Digital Marketing</span>
+                        <span>Specialist &amp; Creative</span>
+                        <span>Web Professional</span>
                     </h1>
-                    <p class="hero-subtitle">
-                        Digital Marketing Specialist | Data Analyst | Front-End Developer
-                    </p>
-                    <p class="hero-description">
-                        Passionate about driving growth through data-driven strategies and creating beautiful, functional web experiences. I combine marketing expertise with technical development skills to deliver impactful results.
-                    </p>
+                    <p class="hero-description">Helping brands grow through SEO, content strategy, social media marketing, website design, and AI-powered digital operations.</p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            View My Projects
-                            <span>→</span>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        <a href="Amol-Shrestha-CV.html" class="btn btn-primary" download>Download CV</a>
+                        <a href="#contact" class="btn btn-secondary">Contact</a>
+                        <a href="#featured-project" class="btn btn-ghost">View Projects</a>
                     </div>
-                    <a href="#contact" class="cv-download">
-                        <span>📥</span> Download Resume
-                    </a>
+                    <div class="hero-socials" aria-label="Social links">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://github.com/anish012a" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
                 </div>
-            </div>
-            <div class="scroll-indicator">
-                <p>Scroll to explore</p>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
+        <section id="about" class="about section-band">
             <div class="container">
-                <div class="section-title">
-                    <h2>About Me</h2>
-                    <p>Who I am and what I do</p>
-                    <div class="title-underline"></div>
+                <div class="section-title fade-up">
+                    <h2>About</h2>
+                    <p>A digital marketing and creative web professional focused on strategy, visibility, and polished brand presentation.</p>
                 </div>
 
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm a versatile digital professional with expertise in digital marketing, data analysis, and front-end development. My unique combination of marketing strategy and technical skills allows me to bridge the gap between business objectives and digital solutions.</p>
-                        <p>With experience in SEO, paid advertising, analytics, and web development, I've helped businesses grow their online presence while creating intuitive user experiences. I'm passionate about data-driven decision-making and continuous learning.</p>
-                        <p>When I'm not working, you'll find me exploring new marketing trends, experimenting with new technologies, or creating content for various platforms.</p>
+                <div class="about-layout">
+                    <div class="about-copy fade-up">
+                        <p>I help brands strengthen their online presence through SEO planning, content optimization, social media execution, and responsive website design. My work combines marketing thinking with practical front-end skills, so campaigns and websites feel aligned from message to layout.</p>
+                        <p>My background also includes AI data operations, structured quality review, and content workflow support. That mix helps me build cleaner digital systems, organize information clearly, and turn brand ideas into recruiter-ready, client-ready web experiences.</p>
                     </div>
 
-                    <div class="about-skills">
-                        <h3>Key Skills</h3>
-                        <div class="skills-grid">
-                            <div class="skill-tag">SEO Optimization</div>
-                            <div class="skill-tag">Google Ads & Analytics</div>
-                            <div class="skill-tag">Social Media Marketing</div>
-                            <div class="skill-tag">Data Analysis</div>
-                            <div class="skill-tag">Excel & Spreadsheets</div>
-                            <div class="skill-tag">React & JavaScript</div>
-                            <div class="skill-tag">HTML & CSS</div>
-                            <div class="skill-tag">AI Tools & Automation</div>
+                    <div class="about-highlights fade-up" aria-label="Professional focus areas">
+                        <div>
+                            <span>01</span>
+                            <strong>SEO &amp; Content Strategy</strong>
+                            <p>Keyword-led content, metadata, on-page structure, and conversion-focused messaging.</p>
+                        </div>
+                        <div>
+                            <span>02</span>
+                            <strong>Creative Website Design</strong>
+                            <p>Responsive layouts, brand presentation, visual hierarchy, and clean front-end delivery.</p>
+                        </div>
+                        <div>
+                            <span>03</span>
+                            <strong>AI Operations</strong>
+                            <p>Data quality, annotation workflows, process consistency, and AI-assisted digital operations.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="experience">
+        <section id="services" class="services">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title fade-up">
+                    <h2>Services</h2>
+                    <p>Focused support for brands that need stronger visibility, better content, and cleaner web presentation.</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card fade-up">
+                        <span>01</span>
+                        <h3>Digital Marketing</h3>
+                        <p>Campaign planning, brand messaging, social content direction, and growth-focused digital execution.</p>
+                    </article>
+                    <article class="service-card fade-up">
+                        <span>02</span>
+                        <h3>SEO Optimization</h3>
+                        <p>Search-friendly content structure, on-page improvements, keyword mapping, and performance review.</p>
+                    </article>
+                    <article class="service-card fade-up">
+                        <span>03</span>
+                        <h3>Website Design</h3>
+                        <p>Modern responsive websites with refined spacing, strong visual hierarchy, and clear user journeys.</p>
+                    </article>
+                    <article class="service-card fade-up">
+                        <span>04</span>
+                        <h3>Content Strategy</h3>
+                        <p>Content calendars, audience-focused messaging, social captions, campaign concepts, and brand stories.</p>
+                    </article>
+                    <article class="service-card fade-up">
+                        <span>05</span>
+                        <h3>AI Data Operations</h3>
+                        <p>Structured data review, quality checks, annotation support, and AI-assisted workflow improvement.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience section-band">
+            <div class="container">
+                <div class="section-title fade-up">
                     <h2>Experience</h2>
-                    <p>My professional journey</p>
-                    <div class="title-underline"></div>
+                    <p>A timeline of marketing, data operations, content, and web design work.</p>
                 </div>
 
-                <div class="experience-list">
-                    <!-- Experience Card 1 -->
-                    <div class="experience-card">
-                        <div class="experience-header">
-                            <h3>Data Analyst</h3>
-                            <div class="experience-meta">
-                                <span class="company">Tech Company</span>
-                                <span class="duration">Jan 2023 - Present</span>
-                                <span class="badge">Full-time</span>
-                            </div>
+                <div class="timeline">
+                    <article class="timeline-item fade-up">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-company">CloudFactory Nepal</p>
+                            <h3>Data Specialist</h3>
+                            <p>Supported AI data operations with structured review, accuracy checks, quality control, and workflow consistency across digital tasks.</p>
+                            <ul>
+                                <li>Data quality review and annotation support</li>
+                                <li>Process-focused task handling</li>
+                                <li>Accuracy, consistency, and documentation</li>
+                            </ul>
                         </div>
-                        <ul class="experience-bullets">
-                            <li>Analyzed marketing campaigns and provided actionable insights</li>
-                            <li>Created dashboards and reports using Google Analytics and Excel</li>
-                            <li>Optimized ad spend resulting in 40% ROI improvement</li>
-                            <li>Collaborated with marketing team on data-driven strategies</li>
-                        </ul>
-                    </div>
-
-                    <!-- Experience Card 2 -->
-                    <div class="experience-card">
-                        <div class="experience-header">
-                            <h3>AI Data Trainer</h3>
-                            <div class="experience-meta">
-                                <span class="company">AI Training Company</span>
-                                <span class="duration">Jun 2022 - Dec 2022</span>
-                                <span class="badge">Contract</span>
-                            </div>
+                    </article>
+                    <article class="timeline-item fade-up">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-company">PI Innovations</p>
+                            <h3>Frontend Development Intern</h3>
+                            <p>Worked on responsive front-end layouts, interface polish, and implementation support for web pages and brand-facing digital experiences.</p>
+                            <ul>
+                                <li>HTML, CSS, and JavaScript implementation</li>
+                                <li>Responsive layout and UI refinement</li>
+                                <li>Collaboration with design and development teams</li>
+                            </ul>
                         </div>
-                        <ul class="experience-bullets">
-                            <li>Trained AI models for natural language processing</li>
-                            <li>Quality assured and annotated training data</li>
-                            <li>Provided detailed feedback on AI model outputs</li>
-                            <li>Worked with diverse datasets and languages</li>
-                        </ul>
-                    </div>
-
-                    <!-- Experience Card 3 -->
-                    <div class="experience-card">
-                        <div class="experience-header">
-                            <h3>Front-End Development Intern</h3>
-                            <div class="experience-meta">
-                                <span class="company">Digital Agency</span>
-                                <span class="duration">Mar 2022 - May 2022</span>
-                                <span class="badge">Internship</span>
-                            </div>
+                    </article>
+                    <article class="timeline-item fade-up">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-company">Content Operations</p>
+                            <h3>YouTube Channel Management</h3>
+                            <p>Managed content presentation, video optimization, posting workflows, and audience-facing channel improvements.</p>
+                            <ul>
+                                <li>Video titles, descriptions, and content SEO</li>
+                                <li>Thumbnail and upload workflow support</li>
+                                <li>Audience engagement and channel organization</li>
+                            </ul>
                         </div>
-                        <ul class="experience-bullets">
-                            <li>Developed responsive websites using HTML, CSS, and JavaScript</li>
-                            <li>Collaborated with designers to implement UI/UX designs</li>
-                            <li>Fixed bugs and improved website performance</li>
-                            <li>Participated in code reviews and team meetings</li>
-                        </ul>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Gallery Section -->
         <section id="gallery" class="gallery">
             <div class="container">
-                <div class="section-title">
-                    <h2>Visual Portfolio</h2>
-                    <p>A curated collection of web design, UI/UX work, social content, campaign visuals, and motion assets.</p>
-                    <div class="title-underline"></div>
+                <div class="section-title fade-up">
+                    <h2>Gallery</h2>
+                    <p>Selected social media, website design, branding, and marketing visuals from the existing portfolio assets.</p>
                 </div>
 
-                <!-- Gallery Grid -->
-                <div class="gallery-grid" id="galleryGrid">
-                    <!-- Placeholder for dynamically loaded images -->
+                <div class="gallery-filter-bar fade-up" aria-label="Gallery category filters">
+                    <button class="gallery-filter-btn active" type="button" data-gallery-filter="all" aria-pressed="true">All</button>
+                    <button class="gallery-filter-btn" type="button" data-gallery-filter="social-media" aria-pressed="false">Social Media</button>
+                    <button class="gallery-filter-btn" type="button" data-gallery-filter="website-design" aria-pressed="false">Website Design</button>
+                    <button class="gallery-filter-btn" type="button" data-gallery-filter="branding" aria-pressed="false">Branding</button>
+                    <button class="gallery-filter-btn" type="button" data-gallery-filter="marketing" aria-pressed="false">Marketing</button>
                 </div>
 
-                <!-- Lightbox Modal -->
-                <div class="lightbox" id="lightbox">
-                    <span class="lightbox-close">&times;</span>
-                    <img class="lightbox-image" id="lightboxImage" src="" alt="">
-                    <div class="lightbox-nav">
-                        <button class="lightbox-prev">❮</button>
-                        <button class="lightbox-next">❯</button>
-                    </div>
+                <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+
+                <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery preview">
+                    <button class="lightbox-close" type="button" aria-label="Close preview">&times;</button>
+                    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">Prev</button>
+                    <figure class="lightbox-figure">
+                        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+                        <figcaption class="lightbox-caption">
+                            <span id="lightboxCategory"></span>
+                            <strong id="lightboxTitle"></strong>
+                            <p id="lightboxDescription"></p>
+                        </figcaption>
+                    </figure>
+                    <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">Next</button>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <section id="featured-project" class="featured-project section-band">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <h2>Featured Project</h2>
+                    <p>A recruiter-focused look at a brand website built for visual presentation and responsive shopping intent.</p>
+                </div>
+
+                <article class="featured-showcase" id="ar-clothing-zone-case-study">
+                    <div class="featured-media fade-up">
+                        <img src="images/b56cee19-2be4-4109-aaaa-26a5781f9364.png" alt="AR Clothing Zone brand artwork" loading="lazy" decoding="async">
+                    </div>
+                    <div class="featured-copy fade-up">
+                        <p class="project-type">Fashion E-Commerce Website</p>
+                        <h3>AR Clothing Zone</h3>
+                        <p>Designed and developed a modern fashion brand website focused on product presentation, clean user experience, responsive design, and visual branding.</p>
+
+                        <div class="responsibility-list" aria-label="Responsibilities">
+                            <span>UI Design</span>
+                            <span>Frontend Development</span>
+                            <span>Layout Design</span>
+                            <span>Brand Presentation</span>
+                            <span>Responsive Design</span>
+                        </div>
+
+                        <div class="featured-actions">
+                            <a href="https://anish012a.github.io/ar-clothing-zone-site/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <button class="btn btn-secondary case-study-toggle" type="button" aria-expanded="false" aria-controls="arCaseStudy">Case Study</button>
+                        </div>
+
+                        <div class="featured-socials" aria-label="Featured project social links">
+                            <a href="https://www.facebook.com/profile.php?id=61577519197483" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Facebook</a>
+                            <a href="https://www.instagram.com/arclothingzone/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        </div>
+
+                        <div class="case-study-panel" id="arCaseStudy" hidden>
+                            <div>
+                                <strong>Goal</strong>
+                                <p>Create a polished fashion brand experience that presents products clearly and builds trust across desktop and mobile.</p>
+                            </div>
+                            <div>
+                                <strong>Approach</strong>
+                                <p>Balanced strong visuals with simple navigation, clean spacing, responsive sections, and brand-led product presentation.</p>
+                            </div>
+                            <div>
+                                <strong>Result</strong>
+                                <p>A modern e-commerce landing experience suitable for campaign traffic, social promotion, and brand discovery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section id="projects" class="projects">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title fade-up">
                     <h2>Projects</h2>
-                    <p>Work I'm proud of</p>
-                    <div class="title-underline"></div>
+                    <p>Selected work across websites, marketing campaigns, creative content, and digital operations.</p>
                 </div>
 
-                <!-- Filter Buttons -->
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="websites">Websites</button>
-                    <button class="filter-btn" data-filter="marketing">Marketing</button>
-                    <button class="filter-btn" data-filter="data">Data</button>
-                    <button class="filter-btn" data-filter="content">Content</button>
+                <div class="project-filter-bar fade-up" aria-label="Project category filters">
+                    <button class="project-filter-btn active" type="button" data-project-filter="all" aria-pressed="true">All Projects</button>
+                    <button class="project-filter-btn" type="button" data-project-filter="website">Website Design</button>
+                    <button class="project-filter-btn" type="button" data-project-filter="marketing">Marketing</button>
+                    <button class="project-filter-btn" type="button" data-project-filter="content">Content</button>
+                    <button class="project-filter-btn" type="button" data-project-filter="operations">Operations</button>
                 </div>
 
-                <!-- Projects Grid -->
                 <div class="projects-grid" id="projectsGrid">
-                    <!-- Project Card 1 -->
-                    <div class="project-card" data-category="websites">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x300?text=E-Commerce+Website" alt="E-Commerce Website">
-                            <div class="project-overlay">
-                                <a href="#" class="icon-btn" title="View project">🔗</a>
-                                <a href="#" class="icon-btn" title="View code">💻</a>
+                    <article class="project-card fade-up" data-category="website">
+                        <a class="project-image" href="https://anish012a.github.io/ar-clothing-zone-site/" target="_blank" rel="noopener noreferrer" aria-label="Open AR Clothing Zone live website">
+                            <img src="images/691949554_122183064116743567_82088808901871838_n.jpg" alt="AR Clothing Zone product presentation" loading="lazy" decoding="async">
+                            <span class="project-category">Website Design</span>
+                        </a>
+                        <div class="project-content">
+                            <h3>AR Clothing Zone</h3>
+                            <p>Fashion e-commerce website focused on product clarity, brand energy, and responsive shopping presentation.</p>
+                            <div class="project-tools">
+                                <span>UI Design</span>
+                                <span>Frontend</span>
+                                <span>Responsive</span>
                             </div>
-                            <span class="project-category">websites</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-up" data-category="marketing">
+                        <div class="project-image">
+                            <img src="images/index.jpg" alt="Study in Canada campaign creative" loading="lazy" decoding="async">
+                            <span class="project-category">Marketing</span>
                         </div>
                         <div class="project-content">
-                            <h3>E-Commerce Website Redesign</h3>
-                            <p>Redesigned and developed a modern e-commerce platform with improved UX and conversion optimization.</p>
+                            <h3>Education Campaign Creative</h3>
+                            <p>Campaign visual designed with clear hierarchy, urgency, and call-to-action structure for lead generation.</p>
                             <div class="project-tools">
-                                <span class="tool">React</span>
-                                <span class="tool">Tailwind CSS</span>
-                                <span class="tool">Node.js</span>
+                                <span>Campaign Design</span>
+                                <span>Copy Layout</span>
+                                <span>CTA Focus</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project Card 2 -->
-                    <div class="project-card" data-category="marketing">
+                    <article class="project-card fade-up" data-category="content">
                         <div class="project-image">
-                            <img src="https://via.placeholder.com/400x300?text=Marketing+Campaign" alt="Marketing Campaign">
-                            <div class="project-overlay">
-                                <a href="#" class="icon-btn" title="View project">🔗</a>
-                                <a href="#" class="icon-btn" title="View code">💻</a>
-                            </div>
-                            <span class="project-category">marketing</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>Digital Marketing Campaign</h3>
-                            <p>Executed multi-channel marketing campaign including SEO, paid ads, and social media content.</p>
-                            <div class="project-tools">
-                                <span class="tool">Google Ads</span>
-                                <span class="tool">Analytics</span>
-                                <span class="tool">Canva</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 3 -->
-                    <div class="project-card" data-category="data">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x300?text=Data+Dashboard" alt="Data Dashboard">
-                            <div class="project-overlay">
-                                <a href="#" class="icon-btn" title="View project">🔗</a>
-                                <a href="#" class="icon-btn" title="View code">💻</a>
-                            </div>
-                            <span class="project-category">data</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>Data Dashboard Analytics</h3>
-                            <p>Built interactive data visualization dashboard tracking key marketing metrics and KPIs.</p>
-                            <div class="project-tools">
-                                <span class="tool">Excel</span>
-                                <span class="tool">Google Analytics</span>
-                                <span class="tool">Data Visualization</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 4 -->
-                    <div class="project-card" data-category="marketing">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x300?text=Social+Content" alt="Social Content">
-                            <div class="project-overlay">
-                                <a href="#" class="icon-btn" title="View project">🔗</a>
-                                <a href="#" class="icon-btn" title="View code">💻</a>
-                            </div>
-                            <span class="project-category">marketing</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>Social Media Content Series</h3>
-                            <p>Created engaging social media content including graphics, videos, and captions for multiple platforms.</p>
-                            <div class="project-tools">
-                                <span class="tool">Photoshop</span>
-                                <span class="tool">Premier Pro</span>
-                                <span class="tool">After Effects</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 5 -->
-                    <div class="project-card" data-category="websites">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x300?text=Portfolio" alt="Portfolio">
-                            <div class="project-overlay">
-                                <a href="#" class="icon-btn" title="View project">🔗</a>
-                                <a href="#" class="icon-btn" title="View code">💻</a>
-                            </div>
-                            <span class="project-category">websites</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>Personal Portfolio Website</h3>
-                            <p>Developed a modern, responsive portfolio website showcasing work and professional experience.</p>
-                            <div class="project-tools">
-                                <span class="tool">React</span>
-                                <span class="tool">Framer Motion</span>
-                                <span class="tool">Tailwind</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 6 -->
-                    <div class="project-card" data-category="content">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x300?text=YouTube+Channel" alt="YouTube Channel">
-                            <div class="project-overlay">
-                                <a href="#" class="icon-btn" title="View project">🔗</a>
-                                <a href="#" class="icon-btn" title="View code">💻</a>
-                            </div>
-                            <span class="project-category">content</span>
+                            <img src="images/ChatGPT Image May 17, 2026, 01_19_26 PM.png" alt="Video thumbnail creative" loading="lazy" decoding="async">
+                            <span class="project-category">Content</span>
                         </div>
                         <div class="project-content">
                             <h3>YouTube Channel Management</h3>
-                            <p>Managed YouTube channel including video editing, SEO optimization, and audience growth strategies.</p>
+                            <p>Content workflow support including video presentation, title optimization, thumbnail direction, and channel organization.</p>
                             <div class="project-tools">
-                                <span class="tool">Adobe Premiere</span>
-                                <span class="tool">TubeBuddy</span>
-                                <span class="tool">Analytics</span>
+                                <span>Video SEO</span>
+                                <span>Thumbnails</span>
+                                <span>Content Ops</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="project-card fade-up" data-category="website">
+                        <div class="project-image">
+                            <img src="images/e97fb72d-c8a3-47f3-b24c-cf94cf7dbda6.png" alt="Website interface highlight" loading="lazy" decoding="async">
+                            <span class="project-category">Website Design</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Responsive Website Presentation</h3>
+                            <p>Website layout concept with improved hierarchy, image framing, section rhythm, and mobile-friendly composition.</p>
+                            <div class="project-tools">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>UX Layout</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-up" data-category="marketing">
+                        <div class="project-image">
+                            <img src="images/festive-campaign-art.png" alt="Festive campaign artwork" loading="lazy" decoding="async">
+                            <span class="project-category">Marketing</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Festive Social Campaign</h3>
+                            <p>Seasonal brand creative designed for social engagement, message clarity, and polished visual presentation.</p>
+                            <div class="project-tools">
+                                <span>Social Media</span>
+                                <span>Branding</span>
+                                <span>Design</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-up" data-category="operations">
+                        <div class="project-image">
+                            <img src="images/ChatGPT Image May 12, 2026, 10_41_55 AM.png" alt="Analytics reporting visual" loading="lazy" decoding="async">
+                            <span class="project-category">Operations</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>AI Data &amp; Analytics Workflow</h3>
+                            <p>Structured workflow support for data quality, reporting clarity, and AI-assisted digital operations.</p>
+                            <div class="project-tools">
+                                <span>AI Ops</span>
+                                <span>Analytics</span>
+                                <span>QA</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
+        <section id="skills" class="skills section-band">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title fade-up">
                     <h2>Skills</h2>
-                    <p>Technologies and expertise</p>
-                    <div class="title-underline"></div>
+                    <p>Organized by the capabilities recruiters, agencies, and clients care about most.</p>
                 </div>
 
                 <div class="skills-categories">
-                    <!-- Digital Marketing -->
-                    <div class="skill-category">
-                        <h3>Digital Marketing</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>SEO Optimization</span>
-                                    <span class="skill-percent">90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Google Ads</span>
-                                    <span class="skill-percent">85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Social Media Marketing</span>
-                                    <span class="skill-percent">88%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 88%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Analytics</span>
-                                    <span class="skill-percent">92%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 92%;"></div>
-                                </div>
-                            </div>
+                    <article class="skill-category fade-up">
+                        <h3>Marketing</h3>
+                        <div class="skill-item" style="--progress: 92%;">
+                            <div class="skill-header"><span>SEO Optimization</span><span>92%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
                         </div>
-                    </div>
+                        <div class="skill-item" style="--progress: 88%;">
+                            <div class="skill-header"><span>Social Media Marketing</span><span>88%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </div>
+                        <div class="skill-item" style="--progress: 86%;">
+                            <div class="skill-header"><span>Campaign Planning</span><span>86%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </div>
+                    </article>
 
-                    <!-- Development -->
-                    <div class="skill-category">
+                    <article class="skill-category fade-up">
+                        <h3>Design</h3>
+                        <div class="skill-item" style="--progress: 90%;">
+                            <div class="skill-header"><span>Website Layout Design</span><span>90%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </div>
+                        <div class="skill-item" style="--progress: 84%;">
+                            <div class="skill-header"><span>Brand Presentation</span><span>84%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </div>
+                        <div class="skill-item" style="--progress: 82%;">
+                            <div class="skill-header"><span>Visual Content Design</span><span>82%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-category fade-up">
                         <h3>Development</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>React.js</span>
-                                    <span class="skill-percent">85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>JavaScript</span>
-                                    <span class="skill-percent">88%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 88%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>HTML & CSS</span>
-                                    <span class="skill-percent">90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Tailwind CSS</span>
-                                    <span class="skill-percent">87%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 87%;"></div>
-                                </div>
-                            </div>
+                        <div class="skill-item" style="--progress: 89%;">
+                            <div class="skill-header"><span>HTML &amp; CSS</span><span>89%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
                         </div>
-                    </div>
+                        <div class="skill-item" style="--progress: 84%;">
+                            <div class="skill-header"><span>JavaScript</span><span>84%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </div>
+                        <div class="skill-item" style="--progress: 80%;">
+                            <div class="skill-header"><span>Responsive Frontend</span><span>80%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </div>
+                    </article>
 
-                    <!-- Data & Tools -->
-                    <div class="skill-category">
-                        <h3>Data & Tools</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Data Analysis</span>
-                                    <span class="skill-percent">87%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 87%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Excel & Sheets</span>
-                                    <span class="skill-percent">91%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 91%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>Google Analytics</span>
-                                    <span class="skill-percent">89%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 89%;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-header">
-                                    <span>AI Tools</span>
-                                    <span class="skill-percent">82%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 82%;"></div>
-                                </div>
-                            </div>
+                    <article class="skill-category fade-up">
+                        <h3>Analytics</h3>
+                        <div class="skill-item" style="--progress: 87%;">
+                            <div class="skill-header"><span>Data Review</span><span>87%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
                         </div>
-                    </div>
+                        <div class="skill-item" style="--progress: 85%;">
+                            <div class="skill-header"><span>Google Analytics</span><span>85%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </div>
+                        <div class="skill-item" style="--progress: 88%;">
+                            <div class="skill-header"><span>AI Data Operations</span><span>88%</span></div>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
-                <div class="section-title">
-                    <h2>Get In Touch</h2>
-                    <p>Let's connect and create something amazing</p>
-                    <div class="title-underline"></div>
+                <div class="section-title fade-up">
+                    <h2>Contact</h2>
+                    <p>Open to recruiter conversations, agency collaborations, and brand website projects.</p>
                 </div>
 
                 <div class="contact-content">
-                    <!-- Contact Info -->
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
+                    <div class="contact-info fade-up">
+                        <h3>Connect Directly</h3>
                         <div class="contact-items">
-                            <a href="mailto:amol@example.com" class="contact-item">
-                                <div class="contact-icon">✉️</div>
-                                <div>
-                                    <p class="contact-label">Email</p>
-                                    <p class="contact-value">amol@example.com</p>
-                                </div>
+                            <a href="mailto:shresthaanish012@gmail.com" class="contact-item">
+                                <span>Email</span>
+                                <strong>shresthaanish012@gmail.com</strong>
                             </a>
-                            <a href="tel:+977" class="contact-item">
-                                <div class="contact-icon">📱</div>
-                                <div>
-                                    <p class="contact-label">Phone</p>
-                                    <p class="contact-value">+977 98...</p>
-                                </div>
+                            <a href="tel:+9779807066877" class="contact-item">
+                                <span>Phone</span>
+                                <strong>9807066877</strong>
                             </a>
-                            <a href="https://linkedin.com" class="contact-item">
-                                <div class="contact-icon">💼</div>
-                                <div>
-                                    <p class="contact-label">LinkedIn</p>
-                                    <p class="contact-value">linkedin.com/in/amol</p>
-                                </div>
+                            <a href="https://www.linkedin.com/in/amol-shrestha-3942ab2b9" class="contact-item" target="_blank" rel="noopener noreferrer">
+                                <span>LinkedIn</span>
+                                <strong>www.linkedin.com/in/amol-shrestha-3942ab2b9</strong>
                             </a>
-                            <a href="https://github.com" class="contact-item">
-                                <div class="contact-icon">💻</div>
-                                <div>
-                                    <p class="contact-label">GitHub</p>
-                                    <p class="contact-value">github.com/amol</p>
-                                </div>
+                            <a href="https://github.com/anish012a" class="contact-item" target="_blank" rel="noopener noreferrer">
+                                <span>GitHub</span>
+                                <strong>github.com/anish012a</strong>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Contact Form -->
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            Send Message
-                            <span>→</span>
-                        </button>
-                        <p class="form-message" id="formMessage"></p>
-                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div>
                     <h3>Amol Shrestha</h3>
-                    <p>Digital Marketing Specialist | Data Analyst | Front-End Developer</p>
+                    <p>Digital Marketing Specialist, SEO &amp; Content Strategist, Creative Website Designer.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Social</h4>
-                    <ul>
-                        <li><a href="https://linkedin.com">LinkedIn</a></li>
-                        <li><a href="https://github.com">GitHub</a></li>
-                        <li><a href="https://twitter.com">Twitter</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                <nav class="footer-links" aria-label="Footer links">
+                    <a href="#services">Services</a>
+                    <a href="#featured-project">Featured Project</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="footer-socials" aria-label="Social links">
+                    <a href="https://www.facebook.com/profile.php?id=61577519197483" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.instagram.com/arclothingzone/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/anish012a" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Amol Shrestha. All rights reserved.</p>
-                <p>Built with ❤️ using HTML, CSS & JavaScript</p>
+                <p>&copy; 2026 Amol Shrestha. All rights reserved.</p>
+                <p>Built with HTML, CSS, JavaScript, and a marketing-first portfolio strategy.</p>
             </div>
         </div>
     </footer>

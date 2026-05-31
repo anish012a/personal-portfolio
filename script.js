@@ -4,8 +4,6 @@ const menuToggle = document.getElementById('menuToggle');
 const navMobile = document.getElementById('navMobile');
 const navLinksMobile = document.querySelectorAll('.nav-link-mobile');
 const navLinks = document.querySelectorAll('.nav-link');
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 const assetBase = 'images/';
@@ -13,130 +11,142 @@ const assetBase = 'images/';
 const portfolioAssets = [
     {
         src: 'index.jpg',
-        title: 'Brand Hero Visual',
-        category: 'Web Design',
-        description: 'Premium landing-page hero artwork built to anchor the visual story.'
+        title: 'Study in Canada Campaign',
+        category: 'Marketing',
+        filter: 'marketing',
+        description: 'Lead-generation campaign creative with a clear hierarchy and action-led message.'
     },
     {
         src: '691949554_122183064116743567_82088808901871838_n.jpg',
-        title: 'Campaign Banner',
-        category: 'Marketing',
-        description: 'Attention-grabbing promo creative for client-facing campaign use.'
+        title: 'AR Clothing Product Shot',
+        category: 'Website Design',
+        filter: 'website-design',
+        description: 'Product-led fashion visual used to support e-commerce presentation.'
     },
     {
         src: '8d194c28-26ec-470c-9cd0-4f0802efe8c1.png',
-        title: 'UI Social Tile',
+        title: 'AR New Year Creative',
         category: 'Social Media',
-        description: 'Crisp social design with strong hierarchy and a clean call to action.'
+        filter: 'social-media',
+        description: 'High-impact social post artwork for brand awareness and seasonal engagement.'
     },
     {
         src: '9f6d35fd-ac49-47fa-9f1b-17e48c230d41.png',
-        title: 'Performance Ad',
-        category: 'Advertising',
-        description: 'Conversion-focused ad creative shaped for fast campaign testing.'
+        title: 'Campaign Conversion Visual',
+        category: 'Marketing',
+        filter: 'marketing',
+        description: 'Promotional visual designed for campaign testing and message clarity.'
     },
     {
         src: 'b56cee19-2be4-4109-aaaa-26a5781f9364.png',
-        title: 'Website Screen',
-        category: 'Web Design',
-        description: 'Polished screen composition for modern website presentation.'
+        title: 'AR Clothing Zone Brand Art',
+        category: 'Branding',
+        filter: 'branding',
+        description: 'Brand-focused creative built around visual identity, energy, and recognition.'
     },
     {
         src: 'ChatGPT Image Apr 1, 2026, 12_20_41 PM.png',
-        title: 'Product Feature Card',
-        category: 'UI/UX',
-        description: 'Feature-focused visual designed to communicate value quickly.'
+        title: 'Feature Presentation Card',
+        category: 'Website Design',
+        filter: 'website-design',
+        description: 'Website-ready visual for communicating a product or service feature quickly.'
     },
     {
         src: 'ChatGPT Image Apr 3, 2026, 09_25_45 AM.png',
-        title: 'Landing Page Split',
-        category: 'Web Design',
-        description: 'Responsive landing page mockup with a strong visual rhythm.'
+        title: 'Landing Page Composition',
+        category: 'Website Design',
+        filter: 'website-design',
+        description: 'Responsive landing-page concept with strong image balance and clean spacing.'
     },
     {
         src: 'ChatGPT Image Apr 15, 2026, 08_49_19 PM.png',
         title: 'Brand Story Frame',
         category: 'Branding',
-        description: 'Editorial layout for a brand story or service overview section.'
+        filter: 'branding',
+        description: 'Editorial brand visual created for a story-led service or product section.'
     },
     {
         src: 'ChatGPT Image Feb 26, 2026, 02_51_42 PM.png',
         title: 'Social Campaign Variant',
         category: 'Social Media',
-        description: 'Variant-based post design for quick A/B testing across channels.'
+        filter: 'social-media',
+        description: 'Variant-based post design suitable for campaign testing across platforms.'
     },
     {
         src: 'ChatGPT Image Feb 26, 2026, 11_34_33 PM.png',
         title: 'Lead Magnet Cover',
-        category: 'Content',
-        description: 'Lead-generation creative with clear messaging hierarchy.'
+        category: 'Marketing',
+        filter: 'marketing',
+        description: 'Content-led campaign cover with a conversion-focused visual structure.'
     },
     {
         src: 'ChatGPT Image May 12, 2026, 10_41_55 AM.png',
         title: 'Analytics Snapshot',
-        category: 'Reporting',
-        description: 'Data-led visual summarising campaign performance at a glance.'
+        category: 'Marketing',
+        filter: 'marketing',
+        description: 'Data-led visual for summarising performance insights at a glance.'
     },
     {
         src: 'ChatGPT Image May 17, 2026, 01_19_26 PM.png',
         title: 'Video Thumbnail',
-        category: 'Motion',
-        description: 'Thumbnail artwork for video content with strong click-through appeal.'
+        category: 'Social Media',
+        filter: 'social-media',
+        description: 'Thumbnail artwork built for video visibility and audience click-through.'
     },
     {
         src: 'ChatGPT Image May 7, 2026, 03_06_46 PM.png',
         title: 'Carousel Slide',
         category: 'Social Media',
-        description: 'Carousel layout built for story-driven social engagement.'
+        filter: 'social-media',
+        description: 'Carousel design for story-driven social engagement and message sequencing.'
     },
     {
         src: 'ChatGPT Image May 7, 2026, 04_33_53 PM.png',
         title: 'Service Promo',
         category: 'Marketing',
-        description: 'Promotional visual created for service awareness and lead capture.'
+        filter: 'marketing',
+        description: 'Promotional creative designed for service awareness and audience action.'
     },
     {
         src: 'ChatGPT Image May 7, 2026, 04_52_26 PM.png',
         title: 'Case Study Cover',
-        category: 'Portfolio',
-        description: 'Hero cover designed to support a detailed case-study story.'
+        category: 'Branding',
+        filter: 'branding',
+        description: 'Portfolio-ready cover artwork for presenting a detailed brand case study.'
     },
     {
         src: 'd62c86d8-3b87-40e6-b28b-d7f5852cea4a.png',
         title: 'Creative Spotlight',
         category: 'Branding',
-        description: 'High-impact visual with strong contrast and premium spacing.'
+        filter: 'branding',
+        description: 'High-contrast brand visual with premium spacing and memorable composition.'
     },
     {
         src: 'e97fb72d-c8a3-47f3-b24c-cf94cf7dbda6.png',
-        title: 'UI Highlight',
-        category: 'UI/UX',
-        description: 'Clean interface composition that reads well on desktop and mobile.'
+        title: 'Website Interface Highlight',
+        category: 'Website Design',
+        filter: 'website-design',
+        description: 'Clean interface composition designed to read well on desktop and mobile.'
     },
     {
         src: 'festive-campaign-art.png',
-        title: 'Festive Campaign Art',
+        title: 'Festive Campaign Artwork',
         category: 'Social Media',
-        description: 'Seasonal post design tailored for community and festive engagement.'
-    },
-    {
-        src: 'index.jpg',
-        title: 'Motion Reel Preview',
-        category: 'Motion',
-        description: 'A motion-led portfolio beat reserved for future video case studies.'
+        filter: 'social-media',
+        description: 'Seasonal post design tailored for community relevance and engagement.'
     }
 ];
+
+let animationObserver;
+let filteredGalleryAssets = [...portfolioAssets];
+let currentLightboxIndex = 0;
+let lastFocusedElement = null;
 
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (savedTheme) {
-        body.classList.toggle('dark-mode', savedTheme === 'dark');
-        return;
-    }
-
-    body.classList.toggle('dark-mode', prefersDark);
+    body.classList.toggle('dark-mode', savedTheme ? savedTheme === 'dark' : prefersDark);
 }
 
 function initNavigation() {
@@ -149,204 +159,222 @@ function initNavigation() {
 
     if (menuToggle && navMobile) {
         menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navMobile.classList.toggle('active');
+            const isOpen = navMobile.classList.toggle('active');
+            menuToggle.classList.toggle('active', isOpen);
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
         });
     }
 
     navLinksMobile.forEach((link) => {
-        link.addEventListener('click', () => {
-            menuToggle?.classList.remove('active');
-            navMobile?.classList.remove('active');
-        });
+        link.addEventListener('click', closeMobileNav);
     });
 
-    navLinks.forEach((link) => {
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener('click', (event) => {
             const href = link.getAttribute('href');
-            if (!href?.startsWith('#')) return;
+            if (!href || href === '#') return;
 
             const target = document.querySelector(href);
             if (!target) return;
 
             event.preventDefault();
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            menuToggle?.classList.remove('active');
-            navMobile?.classList.remove('active');
+            closeMobileNav();
         });
     });
 
     document.addEventListener('scroll', () => {
         if (navMobile?.classList.contains('active')) {
-            menuToggle?.classList.remove('active');
-            navMobile.classList.remove('active');
+            closeMobileNav();
         }
-    });
+    }, { passive: true });
+}
+
+function closeMobileNav() {
+    menuToggle?.classList.remove('active');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    navMobile?.classList.remove('active');
+}
+
+function resolveAsset(fileName) {
+    return encodeURI(`${assetBase}${fileName}`);
 }
 
 function initGallery() {
     const galleryGrid = document.getElementById('galleryGrid');
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxCategory = document.getElementById('lightboxCategory');
+    const lightboxDescription = document.getElementById('lightboxDescription');
     const lightboxClose = document.querySelector('.lightbox-close');
     const lightboxPrev = document.querySelector('.lightbox-prev');
     const lightboxNext = document.querySelector('.lightbox-next');
+    const galleryFilterButtons = document.querySelectorAll('.gallery-filter-btn');
 
     if (!galleryGrid || !lightbox || !lightboxImage || !lightboxClose || !lightboxPrev || !lightboxNext) {
         return;
     }
 
-    const resolveAsset = (fileName) => encodeURI(`${assetBase}${fileName}`);
-    let currentIndex = 0;
+    const renderGallery = (filter = 'all') => {
+        filteredGalleryAssets = filter === 'all'
+            ? [...portfolioAssets]
+            : portfolioAssets.filter((asset) => asset.filter === filter);
 
-    const renderCard = (asset, index) => {
-        const card = document.createElement('button');
-        card.type = 'button';
-        card.className = 'gallery-item';
-        card.setAttribute('aria-label', `Open portfolio item: ${asset.title}`);
-        card.innerHTML = `
-            <span class="gallery-index">${String(index + 1).padStart(2, '0')}</span>
-            <div class="gallery-media">
-                <img src="${resolveAsset(asset.src)}" alt="${asset.title}" loading="lazy" decoding="async">
-            </div>
-            <div class="gallery-overlay">
-                <div class="gallery-overlay-copy">
+        galleryGrid.innerHTML = '';
+
+        filteredGalleryAssets.forEach((asset, index) => {
+            const card = document.createElement('button');
+            card.type = 'button';
+            card.className = 'gallery-item';
+            card.setAttribute('aria-label', `Open gallery preview for ${asset.title}`);
+            card.innerHTML = `
+                <div class="gallery-media">
+                    <img src="${resolveAsset(asset.src)}" alt="${asset.title}" loading="eager" decoding="sync" fetchpriority="high">
+                </div>
+                <div class="gallery-overlay">
                     <span class="gallery-category">${asset.category}</span>
                     <h3>${asset.title}</h3>
                     <p>${asset.description}</p>
                 </div>
-                <span class="gallery-cta">View Project &rarr;</span>
-            </div>
-        `;
+            `;
 
-        card.addEventListener('click', () => openLightbox(index));
-        return card;
+            card.addEventListener('click', () => openLightbox(index));
+            galleryGrid.appendChild(card);
+            registerAnimatedElement(card);
+        });
     };
 
     const openLightbox = (index) => {
-        currentIndex = (index + portfolioAssets.length) % portfolioAssets.length;
-        const asset = portfolioAssets[currentIndex];
+        if (!filteredGalleryAssets.length) return;
+
+        currentLightboxIndex = (index + filteredGalleryAssets.length) % filteredGalleryAssets.length;
+        const asset = filteredGalleryAssets[currentLightboxIndex];
+        lastFocusedElement = document.activeElement;
+
         lightboxImage.src = resolveAsset(asset.src);
         lightboxImage.alt = asset.title;
+        if (lightboxTitle) lightboxTitle.textContent = asset.title;
+        if (lightboxCategory) lightboxCategory.textContent = asset.category;
+        if (lightboxDescription) lightboxDescription.textContent = asset.description;
+
         lightbox.classList.add('active');
         lightbox.setAttribute('aria-hidden', 'false');
         body.style.overflow = 'hidden';
+        lightboxClose.focus();
     };
 
     const closeLightbox = () => {
         lightbox.classList.remove('active');
         lightbox.setAttribute('aria-hidden', 'true');
+        lightboxImage.removeAttribute('src');
         body.style.overflow = '';
+
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+            lastFocusedElement.focus();
+        }
     };
 
     const stepLightbox = (step) => {
-        openLightbox(currentIndex + step);
+        openLightbox(currentLightboxIndex + step);
     };
 
-    galleryGrid.innerHTML = '';
-    portfolioAssets.forEach((asset, index) => {
-        galleryGrid.appendChild(renderCard(asset, index));
+    galleryFilterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            galleryFilterButtons.forEach((item) => {
+                item.classList.remove('active');
+                item.setAttribute('aria-pressed', 'false');
+            });
+
+            button.classList.add('active');
+            button.setAttribute('aria-pressed', 'true');
+            renderGallery(button.dataset.galleryFilter || 'all');
+        });
     });
 
     lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', () => stepLightbox(-1));
+    lightboxNext.addEventListener('click', () => stepLightbox(1));
+
     lightbox.addEventListener('click', (event) => {
         if (event.target === lightbox) {
             closeLightbox();
         }
     });
 
-    lightboxPrev.addEventListener('click', () => stepLightbox(-1));
-    lightboxNext.addEventListener('click', () => stepLightbox(1));
-
     document.addEventListener('keydown', (event) => {
         if (!lightbox.classList.contains('active')) return;
 
-        if (event.key === 'Escape') {
-            closeLightbox();
-        }
-
-        if (event.key === 'ArrowLeft') {
-            stepLightbox(-1);
-        }
-
-        if (event.key === 'ArrowRight') {
-            stepLightbox(1);
-        }
+        if (event.key === 'Escape') closeLightbox();
+        if (event.key === 'ArrowLeft') stepLightbox(-1);
+        if (event.key === 'ArrowRight') stepLightbox(1);
     });
+
+    renderGallery();
 }
 
 function initProjectFiltering() {
-    if (!filterBtns.length || !projectCards.length) return;
+    const projectFilterButtons = document.querySelectorAll('.project-filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
 
-    filterBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach((button) => button.classList.remove('active'));
-            btn.classList.add('active');
+    if (!projectFilterButtons.length || !projectCards.length) return;
 
-            const filter = btn.getAttribute('data-filter');
+    projectFilterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            projectFilterButtons.forEach((item) => {
+                item.classList.remove('active');
+                item.setAttribute('aria-pressed', 'false');
+            });
 
+            button.classList.add('active');
+            button.setAttribute('aria-pressed', 'true');
+
+            const filter = button.dataset.projectFilter || 'all';
             projectCards.forEach((card) => {
-                const isMatch = filter === 'all' || card.getAttribute('data-category') === filter;
-                card.classList.toggle('hidden', !isMatch);
-
-                if (isMatch) {
-                    card.style.animation = 'fadeIn 0.6s ease-out';
-                }
+                const matches = filter === 'all' || card.dataset.category === filter;
+                card.classList.toggle('hidden', !matches);
             });
         });
+    });
+}
+
+function initCaseStudyToggle() {
+    const toggle = document.querySelector('.case-study-toggle');
+    const panel = document.getElementById('arCaseStudy');
+
+    if (!toggle || !panel) return;
+
+    toggle.addEventListener('click', () => {
+        const isOpen = !panel.hidden;
+        panel.hidden = isOpen;
+        toggle.setAttribute('aria-expanded', String(!isOpen));
     });
 }
 
 function initContactForm() {
     if (!contactForm || !formMessage) return;
 
-    let isSubmitting = false;
-
     contactForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        if (isSubmitting) return;
-        isSubmitting = true;
-
         const name = document.getElementById('name')?.value.trim();
         const email = document.getElementById('email')?.value.trim();
+        const service = document.getElementById('service')?.value;
         const message = document.getElementById('message')?.value.trim();
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
 
         if (!name || !email || !message) {
-            showFormMessage('Please fill in all fields', 'error');
-            isSubmitting = false;
+            showFormMessage('Please complete your name, email, and message.', 'error');
             return;
         }
 
         if (!isValidEmail(email)) {
-            showFormMessage('Please enter a valid email', 'error');
-            isSubmitting = false;
+            showFormMessage('Please enter a valid email address.', 'error');
             return;
         }
 
-        console.log('Form Data:', { name, email, message });
+        console.info('Portfolio contact form captured locally:', { name, email, service, message });
         contactForm.reset();
-        showFormMessage('Message sent successfully!', 'success');
-
-        if (submitBtn) {
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                isSubmitting = false;
-            }, 1000);
-        } else {
-            isSubmitting = false;
-        }
-
-        setTimeout(() => {
-            formMessage.classList.remove('success', 'error');
-            formMessage.textContent = '';
-        }, 3000);
+        showFormMessage(`Thanks, ${name}. Your note is ready for follow-up. Please use the social links for direct contact while this static form is connected.`, 'success');
     });
 }
 
@@ -361,21 +389,48 @@ function isValidEmail(email) {
 }
 
 function initScrollAnimations() {
-    const observer = new IntersectionObserver((entries) => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const animatedSelector = '.fade-up, .service-card, .timeline-item, .gallery-item, .project-card, .skill-category, .featured-media, .featured-copy, .contact-info, .contact-form, .skill-item';
+
+    if (prefersReducedMotion) {
+        document.querySelectorAll(animatedSelector).forEach((element) => {
+            element.classList.add('is-visible');
+        });
+        return;
+    }
+
+    animationObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('reveal');
-                observer.unobserve(entry.target);
-            }
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
         });
     }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
     });
 
-    document.querySelectorAll('.skill-item, .experience-card, .project-card').forEach((element) => {
-        observer.observe(element);
-    });
+    document.querySelectorAll(animatedSelector).forEach(registerAnimatedElement);
+
+    window.setTimeout(() => {
+        document.querySelectorAll(animatedSelector).forEach((element) => {
+            element.classList.add('is-visible');
+        });
+    }, 1400);
+}
+
+function registerAnimatedElement(element) {
+    if (!element) return;
+
+    if (animationObserver) {
+        animationObserver.observe(element);
+        return;
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        element.classList.add('is-visible');
+    }
 }
 
 function createBackToTopButton() {
@@ -383,33 +438,13 @@ function createBackToTopButton() {
     button.id = 'backToTop';
     button.type = 'button';
     button.setAttribute('aria-label', 'Back to top');
-    button.textContent = 'TOP';
-    button.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        border-radius: 999px;
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        cursor: pointer;
-        font-size: 1.2rem;
-        z-index: 99;
-        display: none;
-        transition: all 0.3s ease;
-        box-shadow: 0 12px 30px rgba(0, 102, 255, 0.3);
-    `;
+    button.textContent = 'Top';
 
     document.body.appendChild(button);
 
     window.addEventListener('scroll', () => {
-        const visible = window.pageYOffset > 300;
-        button.style.display = visible ? 'flex' : 'none';
-        button.style.alignItems = 'center';
-        button.style.justifyContent = 'center';
-    });
+        button.style.display = window.scrollY > 420 ? 'flex' : 'none';
+    }, { passive: true });
 
     button.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -417,11 +452,13 @@ function createBackToTopButton() {
 }
 
 function initActiveNavLink() {
-    window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('main section[id]');
+
+    const updateActiveLink = () => {
         let current = '';
 
-        document.querySelectorAll('section').forEach((section) => {
-            if (pageYOffset >= section.offsetTop - 200) {
+        sections.forEach((section) => {
+            if (window.scrollY >= section.offsetTop - 180) {
                 current = section.getAttribute('id') || '';
             }
         });
@@ -429,7 +466,10 @@ function initActiveNavLink() {
         navLinks.forEach((link) => {
             link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
         });
-    });
+    };
+
+    updateActiveLink();
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
 }
 
 function initPage() {
@@ -437,11 +477,11 @@ function initPage() {
     initNavigation();
     initGallery();
     initProjectFiltering();
+    initCaseStudyToggle();
     initContactForm();
     initScrollAnimations();
     initActiveNavLink();
     createBackToTopButton();
-    console.log('Portfolio loaded successfully!');
 }
 
 document.addEventListener('DOMContentLoaded', initPage);
