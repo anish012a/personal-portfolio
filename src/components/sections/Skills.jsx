@@ -5,30 +5,35 @@ import SectionTitle from '../SectionTitle'
 export default function Skills() {
   const skillCategories = [
     {
-      category: 'Digital Marketing',
+      category: 'Marketing',
       skills: [
-        { name: 'SEO Optimization', level: 90 },
-        { name: 'Google Ads', level: 85 },
+        { name: 'SEO Optimization', level: 92 },
         { name: 'Social Media Marketing', level: 88 },
-        { name: 'Analytics', level: 92 }
+        { name: 'Campaign Planning', level: 86 }
+      ]
+    },
+    {
+      category: 'Design',
+      skills: [
+        { name: 'Website Layout Design', level: 90 },
+        { name: 'Brand Presentation', level: 84 },
+        { name: 'Visual Content Design', level: 82 }
       ]
     },
     {
       category: 'Development',
       skills: [
-        { name: 'React.js', level: 85 },
-        { name: 'JavaScript', level: 88 },
-        { name: 'HTML & CSS', level: 90 },
-        { name: 'Tailwind CSS', level: 87 }
+        { name: 'HTML & CSS', level: 89 },
+        { name: 'JavaScript', level: 84 },
+        { name: 'Responsive Frontend', level: 80 }
       ]
     },
     {
-      category: 'Data & Tools',
+      category: 'Analytics',
       skills: [
-        { name: 'Data Analysis', level: 87 },
-        { name: 'Excel & Sheets', level: 91 },
-        { name: 'Google Analytics', level: 89 },
-        { name: 'AI Tools', level: 82 }
+        { name: 'Data Review', level: 87 },
+        { name: 'Google Analytics', level: 85 },
+        { name: 'AI Data Operations', level: 88 }
       ]
     }
   ]
@@ -57,7 +62,7 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto">
         <SectionTitle title="Skills" subtitle="Technologies and expertise" />
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {skillCategories.map((category, catIndex) => (
             <motion.div
               key={category.category}

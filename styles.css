@@ -1087,7 +1087,8 @@ body.dark-mode .theme-icon-dark {
     padding: 30px;
 }
 
-.contact-info h3 {
+.contact-info h3,
+.contact-form h3 {
     color: var(--ink);
     font-family: "Manrope", "Inter", sans-serif;
     font-size: 1.55rem;

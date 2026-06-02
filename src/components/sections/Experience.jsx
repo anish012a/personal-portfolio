@@ -7,41 +7,41 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
-      role: 'Data Analyst',
-      company: 'Tech Company',
-      duration: 'Jan 2023 - Present',
-      type: 'Full-time',
+      role: 'Data Specialist',
+      company: 'CloudFactory Nepal',
+      duration: 'Data operations',
+      type: 'Professional',
       responsibilities: [
-        'Analyzed marketing campaigns and provided actionable insights',
-        'Created dashboards and reports using Google Analytics and Excel',
-        'Optimized ad spend resulting in 40% ROI improvement',
-        'Collaborated with marketing team on data-driven strategies'
+        'Supported AI data operations with structured review and accuracy checks',
+        'Handled quality control tasks with process consistency and documentation',
+        'Reviewed data outputs for clarity, correctness, and workflow alignment',
+        'Worked with digital task systems that required focus, speed, and precision'
       ]
     },
     {
       id: 2,
-      role: 'AI Data Trainer',
-      company: 'AI Training Company',
-      duration: 'Jun 2022 - Dec 2022',
-      type: 'Contract',
+      role: 'Front-End Development Intern',
+      company: 'PI Innovations',
+      duration: 'Frontend internship',
+      type: 'Internship',
       responsibilities: [
-        'Trained AI models for natural language processing',
-        'Quality assured and annotated training data',
-        'Provided detailed feedback on AI model outputs',
-        'Worked with diverse datasets and languages'
+        'Worked on responsive front-end layouts using HTML, CSS, and JavaScript',
+        'Supported interface polish and implementation for web pages',
+        'Collaborated with design and development teams on brand-facing experiences',
+        'Improved layout consistency across desktop and mobile screens'
       ]
     },
     {
       id: 3,
-      role: 'Front-End Development Intern',
-      company: 'Digital Agency',
-      duration: 'Mar 2022 - May 2022',
-      type: 'Internship',
+      role: 'YouTube Channel Management',
+      company: 'Content Operations',
+      duration: 'Content workflow',
+      type: 'Project',
       responsibilities: [
-        'Developed responsive websites using HTML, CSS, and JavaScript',
-        'Collaborated with designers to implement UI/UX designs',
-        'Fixed bugs and improved website performance',
-        'Participated in code reviews and team meetings'
+        'Managed content presentation, upload workflows, and channel organization',
+        'Optimized titles, descriptions, and content structure for discoverability',
+        'Supported thumbnail direction and audience-facing improvements',
+        'Kept publishing workflows organized for cleaner content operations'
       ]
     }
   ]

@@ -24,91 +24,111 @@ const itemVariants = {
 
 export default function Hero() {
   const scrollToProjects = () => {
-    document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })
+    document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-20 pb-20 px-4 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 dark:bg-blue-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-300 dark:bg-purple-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-cyan-300 dark:bg-cyan-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '4s' }}></div>
+    <section id="hero" className="min-h-[720px] flex items-center pt-24 pb-20 px-4 relative overflow-hidden bg-gray-950 text-white">
+      <div className="absolute inset-0">
+        <img
+          src="/images/b56cee19-2be4-4109-aaaa-26a5781f9364.png"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center opacity-45"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/85 to-gray-950/45"></div>
       </div>
 
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-4xl mx-auto text-center"
+        className="relative z-10 max-w-6xl mx-auto w-full"
       >
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-4xl"
         >
-          Hi, I'm <span className="gradient-text">Amol Shrestha</span>
+          Digital Marketing Specialist & Creative Web Professional
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+          className="text-xl md:text-2xl text-white/85 mb-8 max-w-2xl"
         >
-          Digital Marketing Specialist | Data Analyst | Front-End Developer
+          Amol Shrestha helps brands grow through SEO, content strategy, social media marketing, website design, and AI-powered digital operations.
         </motion.p>
 
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg text-white/70 mb-10 max-w-2xl leading-relaxed"
         >
-          Passionate about driving growth through data-driven strategies and creating beautiful, functional web experiences. I combine marketing expertise with technical development skills to deliver impactful results.
+          I combine marketing thinking with practical front-end skills so campaigns, content, and websites feel aligned from message to layout.
         </motion.p>
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+          className="flex flex-col sm:flex-row gap-4 mb-8"
         >
-          <button
-            onClick={scrollToProjects}
-            className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 dark:bg-blue-600 hover:bg-blue-700 dark:hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 group"
+          <a
+            href="Amol-Shrestha-CV.html"
+            download
+            className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 group"
           >
-            View My Projects
-            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-          </button>
+            <Download size={20} className="mr-2" />
+            Download CV
+          </a>
 
           <a
             href="#contact"
             onClick={(e) => {
               e.preventDefault()
-              document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })
+              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
             }}
-            className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400 text-gray-900 dark:text-white font-semibold rounded-lg transition-all duration-300 hover:bg-gray-50 dark:hover:bg-dark-700"
+            className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 hover:border-white text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10"
           >
-            Get In Touch
+            Contact
           </a>
+
+          <button
+            onClick={scrollToProjects}
+            className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 hover:border-white text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10 group"
+          >
+            View Projects
+            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+          </button>
         </motion.div>
 
-        <motion.a
+        <motion.div
           variants={itemVariants}
-          href="#"
-          onClick={(e) => {
-            e.preventDefault()
-            // Add actual CV download link here
-          }}
-          className="inline-flex items-center justify-center px-6 py-3 text-blue-600 dark:text-blue-400 font-semibold hover:underline transition-colors"
+          className="flex flex-wrap gap-3"
         >
-          <Download size={20} className="mr-2" />
-          Download Resume
-        </motion.a>
+          <a
+            href="https://www.linkedin.com/in/amol-shrestha-3942ab2b9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-lg border border-white/25 text-white/85 font-semibold hover:bg-white hover:text-gray-950 transition-all"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/anish012a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-lg border border-white/25 text-white/85 font-semibold hover:bg-white hover:text-gray-950 transition-all"
+          >
+            GitHub
+          </a>
+        </motion.div>
       </motion.div>
 
-      {/* Scroll Indicator */}
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
       >
         <div className="flex flex-col items-center space-y-2 text-gray-400 dark:text-gray-600">
-          <p className="text-sm">Scroll to explore</p>
+          <p className="text-sm text-white/55">Scroll to explore</p>
           <svg
             className="w-5 h-5"
             fill="none"

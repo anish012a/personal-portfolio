@@ -8,7 +8,10 @@ export default function Header({ isDark, setIsDark }) {
   const navLinks = [
     { name: 'Home', href: '#hero' },
     { name: 'About', href: '#about' },
+    { name: 'Services', href: '#services' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Gallery', href: '#gallery' },
+    { name: 'Featured', href: '#featured-project' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' }
@@ -38,7 +41,7 @@ export default function Header({ isDark, setIsDark }) {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center gap-5">
             {navLinks.map((link) => (
               <button
                 key={link.name}
@@ -66,7 +69,9 @@ export default function Header({ isDark, setIsDark }) {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-dark-700"
+              className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-dark-700"
+              aria-label={isMenuOpen ? 'Close navigation' : 'Open navigation'}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? (
                 <X size={24} />
@@ -83,7 +88,7 @@ export default function Header({ isDark, setIsDark }) {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden pb-4 border-t border-gray-200 dark:border-gray-700"
+            className="lg:hidden pb-4 border-t border-gray-200 dark:border-gray-700"
           >
             {navLinks.map((link) => (
               <button

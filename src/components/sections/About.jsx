@@ -5,13 +5,13 @@ import SectionTitle from '../SectionTitle'
 export default function About() {
   const skills = [
     'SEO Optimization',
-    'Google Ads & Analytics',
+    'Content Strategy',
     'Social Media Marketing',
-    'Data Analysis',
-    'Excel & Spreadsheets',
-    'React & JavaScript',
-    'HTML & CSS',
-    'AI Tools & Automation'
+    'Website Layout Design',
+    'HTML, CSS & JavaScript',
+    'Responsive Frontend',
+    'AI Data Operations',
+    'Brand Presentation'
   ]
 
   return (
@@ -28,15 +28,15 @@ export default function About() {
             viewport={{ once: true }}
           >
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              I'm a versatile digital professional with expertise in digital marketing, data analysis, and front-end development. My unique combination of marketing strategy and technical skills allows me to bridge the gap between business objectives and digital solutions.
+              I help brands strengthen their online presence through SEO planning, content optimization, social media execution, and responsive website design. My work combines marketing thinking with practical front-end skills, so campaigns and websites feel aligned from message to layout.
             </p>
 
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              With experience in SEO, paid advertising, analytics, and web development, I've helped businesses grow their online presence while creating intuitive user experiences. I'm passionate about data-driven decision-making and continuous learning.
+              My background also includes AI data operations, structured quality review, and content workflow support. That mix helps me build cleaner digital systems, organize information clearly, and turn brand ideas into recruiter-ready, client-ready web experiences.
             </p>
 
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              When I'm not working, you'll find me exploring new marketing trends, experimenting with new technologies, or creating content for various platforms.
+              I am focused on practical digital work: better visibility, better content, cleaner layouts, and a stronger first impression for brands and projects.
             </p>
           </motion.div>
 

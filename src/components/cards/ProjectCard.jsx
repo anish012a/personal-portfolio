@@ -4,6 +4,9 @@ import { ExternalLink, Github } from 'lucide-react'
 
 export default function ProjectCard({ project, index }) {
   const [isHovered, setIsHovered] = useState(false)
+  const hasProjectLink = project.link && project.link !== '#'
+  const hasCodeLink = project.code && project.code !== '#'
+  const hasActions = hasProjectLink || hasCodeLink
 
   return (
     <motion.div
@@ -14,39 +17,47 @@ export default function ProjectCard({ project, index }) {
       viewport={{ once: true }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group bg-white dark:bg-dark-700 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 hover:shadow-xl cursor-pointer"
+      className="group bg-white dark:bg-dark-700 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 hover:shadow-xl"
     >
       {/* Image Container */}
       <div className="relative h-48 md:h-56 overflow-hidden bg-gray-100 dark:bg-dark-600">
         <img
           src={project.image}
           alt={project.title}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isHovered ? 1 : 0 }}
-          className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 transition-opacity duration-300"
-        >
-          {project.link && project.link !== '#' && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white dark:bg-dark-800 rounded-full hover:bg-blue-600 hover:text-white transition-all"
-              aria-label="View project"
-            >
-              <ExternalLink size={24} />
-            </a>
-          )}
-          <a
-            href="#"
-            className="p-3 bg-white dark:bg-dark-800 rounded-full hover:bg-blue-600 hover:text-white transition-all"
-            aria-label="View code"
+        {hasActions && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isHovered ? 1 : 0 }}
+            className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 transition-opacity duration-300"
           >
-            <Github size={24} />
-          </a>
-        </motion.div>
+            {hasProjectLink && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white dark:bg-dark-800 rounded-full hover:bg-blue-600 hover:text-white transition-all"
+                aria-label="View project"
+              >
+                <ExternalLink size={24} />
+              </a>
+            )}
+            {hasCodeLink && (
+              <a
+                href={project.code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white dark:bg-dark-800 rounded-full hover:bg-blue-600 hover:text-white transition-all"
+                aria-label="View source code"
+              >
+                <Github size={24} />
+              </a>
+            )}
+          </motion.div>
+        )}
 
         {/* Category Badge */}
         <div className="absolute top-3 left-3">

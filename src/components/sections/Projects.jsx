@@ -9,66 +9,66 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Website Redesign',
-      description: 'Redesigned and developed a modern e-commerce platform with improved UX and conversion optimization.',
-      category: 'websites',
-      tools: ['React', 'Tailwind CSS', 'Node.js'],
-      image: 'https://via.placeholder.com/400x300?text=E-Commerce+Website',
-      link: '#'
+      title: 'AR Clothing Zone',
+      description: 'Fashion e-commerce website focused on product clarity, brand energy, and responsive shopping presentation.',
+      category: 'website',
+      tools: ['UI Design', 'Frontend', 'Responsive'],
+      image: '/images/691949554_122183064116743567_82088808901871838_n.jpg',
+      link: 'https://anish012a.github.io/ar-clothing-zone-site/'
     },
     {
       id: 2,
-      title: 'Digital Marketing Campaign',
-      description: 'Executed multi-channel marketing campaign including SEO, paid ads, and social media content.',
+      title: 'Education Campaign Creative',
+      description: 'Campaign visual designed with clear hierarchy, urgency, and call-to-action structure for lead generation.',
       category: 'marketing',
-      tools: ['Google Ads', 'Analytics', 'Canva'],
-      image: 'https://via.placeholder.com/400x300?text=Marketing+Campaign',
+      tools: ['Campaign Design', 'Copy Layout', 'CTA Focus'],
+      image: '/images/index.jpg',
       link: '#'
     },
     {
       id: 3,
-      title: 'Data Dashboard Analytics',
-      description: 'Built interactive data visualization dashboard tracking key marketing metrics and KPIs.',
-      category: 'data',
-      tools: ['Excel', 'Google Analytics', 'Data Visualization'],
-      image: 'https://via.placeholder.com/400x300?text=Data+Dashboard',
+      title: 'YouTube Channel Management',
+      description: 'Content workflow support including video presentation, title optimization, thumbnail direction, and channel organization.',
+      category: 'content',
+      tools: ['Video SEO', 'Thumbnails', 'Content Ops'],
+      image: '/images/ChatGPT Image May 17, 2026, 01_19_26 PM.png',
       link: '#'
     },
     {
       id: 4,
-      title: 'Social Media Content Series',
-      description: 'Created engaging social media content including graphics, videos, and captions for multiple platforms.',
-      category: 'marketing',
-      tools: ['Photoshop', 'Premier Pro', 'After Effects'],
-      image: 'https://via.placeholder.com/400x300?text=Social+Content',
+      title: 'Responsive Website Presentation',
+      description: 'Website layout concept with improved hierarchy, image framing, section rhythm, and mobile-friendly composition.',
+      category: 'website',
+      tools: ['HTML', 'CSS', 'UX Layout'],
+      image: '/images/e97fb72d-c8a3-47f3-b24c-cf94cf7dbda6.png',
       link: '#'
     },
     {
       id: 5,
-      title: 'Personal Portfolio Website',
-      description: 'Developed a modern, responsive portfolio website showcasing work and professional experience.',
-      category: 'websites',
-      tools: ['React', 'Framer Motion', 'Tailwind'],
-      image: 'https://via.placeholder.com/400x300?text=Portfolio',
+      title: 'Festive Social Campaign',
+      description: 'Seasonal brand creative designed for social engagement, message clarity, and polished visual presentation.',
+      category: 'marketing',
+      tools: ['Social Media', 'Branding', 'Design'],
+      image: '/images/festive-campaign-art.png',
       link: '#'
     },
     {
       id: 6,
-      title: 'YouTube Channel Management',
-      description: 'Managed YouTube channel including video editing, SEO optimization, and audience growth strategies.',
-      category: 'content',
-      tools: ['Adobe Premiere', 'TubeBuddy', 'Analytics'],
-      image: 'https://via.placeholder.com/400x300?text=YouTube+Channel',
+      title: 'AI Data & Analytics Workflow',
+      description: 'Structured workflow support for data quality, reporting clarity, and AI-assisted digital operations.',
+      category: 'operations',
+      tools: ['AI Ops', 'Analytics', 'QA'],
+      image: '/images/ChatGPT Image May 12, 2026, 10_41_55 AM.png',
       link: '#'
     }
   ]
 
   const categories = [
     { id: 'all', label: 'All Projects' },
-    { id: 'websites', label: 'Websites' },
+    { id: 'website', label: 'Website Design' },
     { id: 'marketing', label: 'Marketing' },
-    { id: 'data', label: 'Data' },
-    { id: 'content', label: 'Content' }
+    { id: 'content', label: 'Content' },
+    { id: 'operations', label: 'Operations' }
   ]
 
   const filteredProjects = selectedCategory === 'all'

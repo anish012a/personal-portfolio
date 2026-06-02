@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Calendar, Building2 } from 'lucide-react'
+import { Building2, Calendar } from 'lucide-react'
 
 export default function ExperienceCard({ experience, index }) {
   return (
@@ -35,14 +35,16 @@ export default function ExperienceCard({ experience, index }) {
       <ul className="space-y-2 mt-4">
         {experience.responsibilities.map((responsibility, idx) => (
           <motion.li
-            key={idx}
+            key={responsibility}
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: idx * 0.05 }}
             viewport={{ once: true }}
             className="flex gap-3 text-gray-700 dark:text-gray-300"
           >
-            <span className="text-blue-600 dark:text-blue-400 font-bold mt-1">•</span>
+            <span className="text-blue-600 dark:text-blue-400 font-bold mt-1" aria-hidden="true">
+              -
+            </span>
             <span>{responsibility}</span>
           </motion.li>
         ))}
