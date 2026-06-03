@@ -406,7 +406,7 @@ body.dark-mode .theme-icon-dark {
 .hero-backdrop {
     background-image:
         linear-gradient(90deg, rgba(16, 24, 32, 0.96) 0%, rgba(16, 24, 32, 0.86) 45%, rgba(16, 24, 32, 0.52) 74%, rgba(16, 24, 32, 0.42) 100%),
-        url("images/b56cee19-2be4-4109-aaaa-26a5781f9364.png");
+        url("images/profile.jpg");
     background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;

@@ -38,7 +38,7 @@ const portfolioAssets = [
         description: 'Promotional visual designed for campaign testing and message clarity.'
     },
     {
-        src: 'b56cee19-2be4-4109-aaaa-26a5781f9364.png',
+        src: 'profile.jpg',
         title: 'AR Clothing Zone Brand Art',
         category: 'Branding',
         filter: 'branding',

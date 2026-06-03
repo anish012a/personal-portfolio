@@ -31,10 +31,10 @@ export default function Hero() {
     <section id="hero" className="min-h-[720px] flex items-center pt-24 pb-20 px-4 relative overflow-hidden bg-gray-950 text-white">
       <div className="absolute inset-0">
         <img
-          src="/images/b56cee19-2be4-4109-aaaa-26a5781f9364.png"
+          src="/images/profile.jpg"
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-center opacity-45"
+          className="w-full h-full object-cover object-right opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/85 to-gray-950/45"></div>
       </div>
