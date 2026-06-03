@@ -84,6 +84,34 @@ button {
     outline-offset: 3px;
 }
 
+/* Skip link (visible on keyboard focus) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    left: 16px;
+    top: 16px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: var(--paper);
+    color: var(--ink);
+    z-index: 9999;
+    border-radius: 6px;
+    box-shadow: var(--shadow-soft);
+}
+
+/* Ensure focus outlines are visible for interactive elements */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid rgba(0, 104, 217, 0.36);
+    outline-offset: 3px;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -412,6 +440,20 @@ body.dark-mode .theme-icon-dark {
     background-size: cover;
     inset: 0;
     position: absolute;
+}
+
+/* Reserve space for hero to reduce layout shifts */
+.hero {
+    contain: layout paint;
+}
+
+/* Ensure gallery images reserve space and lazy-load friendly */
+.gallery-media img, .project-image img, .featured-media img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
 }
 
 .hero::after {

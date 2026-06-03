@@ -38,6 +38,7 @@ export default function App() {
   return (
     <div className={`${isDark ? 'dark' : ''}`}>
       <div className="bg-white dark:bg-dark-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+        <a href="#maincontent" className="skip-link">Skip to content</a>
         <Header isDark={isDark} setIsDark={setIsDark} />
         <main>
           <Hero />

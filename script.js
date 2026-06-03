@@ -230,7 +230,7 @@ function initGallery() {
             card.setAttribute('aria-label', `Open gallery preview for ${asset.title}`);
             card.innerHTML = `
                 <div class="gallery-media">
-                    <img src="${resolveAsset(asset.src)}" alt="${asset.title}" loading="eager" decoding="sync" fetchpriority="high">
+                    <img src="${resolveAsset(asset.src)}" alt="${asset.title}" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-overlay">
                     <span class="gallery-category">${asset.category}</span>
@@ -305,9 +305,26 @@ function initGallery() {
     document.addEventListener('keydown', (event) => {
         if (!lightbox.classList.contains('active')) return;
 
+        // Close on Escape
         if (event.key === 'Escape') closeLightbox();
         if (event.key === 'ArrowLeft') stepLightbox(-1);
         if (event.key === 'ArrowRight') stepLightbox(1);
+
+        // Trap focus inside lightbox
+        if (event.key === 'Tab') {
+            const focusable = lightbox.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            if (!focusable.length) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        }
     });
 
     renderGallery();
@@ -357,6 +374,12 @@ function initContactForm() {
     contactForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
+        const honeypot = document.getElementById('_honeypot')?.value;
+        if (honeypot) {
+            // spam bot filled the hidden field
+            return;
+        }
+
         const name = document.getElementById('name')?.value.trim();
         const email = document.getElementById('email')?.value.trim();
         const service = document.getElementById('service')?.value;
@@ -372,9 +395,55 @@ function initContactForm() {
             return;
         }
 
-        console.info('Portfolio contact form captured locally:', { name, email, service, message });
-        contactForm.reset();
-        showFormMessage(`Thanks, ${name}. Your note is ready for follow-up. Please use the social links for direct contact while this static form is connected.`, 'success');
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.setAttribute('aria-disabled', 'true');
+            submitButton.textContent = 'Sending...';
+        }
+
+        const formEndpoint = document.querySelector('meta[name="form-endpoint"]')?.content;
+
+        const payload = {
+            name,
+            email,
+            service,
+            message
+        };
+
+        if (formEndpoint) {
+            // send to configured form endpoint (Formspree or similar)
+            fetch(formEndpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then((res) => {
+                if (res.ok) {
+                    contactForm.reset();
+                    showFormMessage(`Thanks, ${name}. Your message was sent.`, 'success');
+                } else {
+                    showFormMessage('There was an error sending your message. Please try again later.', 'error');
+                }
+            }).catch(() => {
+                showFormMessage('There was an error sending your message. Please try again later.', 'error');
+            }).finally(() => {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.removeAttribute('aria-disabled');
+                    submitButton.textContent = 'Send Message';
+                }
+            });
+        } else {
+            // fallback: keep local capture for now
+            console.info('Portfolio contact form captured locally:', payload);
+            contactForm.reset();
+            showFormMessage(`Thanks, ${name}. Your note is ready for follow-up. Please use the social links for direct contact while this static form is connected.`, 'success');
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.removeAttribute('aria-disabled');
+                submitButton.textContent = 'Send Message';
+            }
+        }
     });
 }
 
